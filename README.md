@@ -7,6 +7,8 @@ A Chrome extension helps you learn Japanese through Japanese music videos in You
 * `HTML`
 * `Tailwind CSS`
 * `JavaScript`
+* `AWS platform` (API Gateway, Lambda, DynamoDB, S3, etc)
+* `Modal platform` (for running DL models with GPU)
 
 ## 🚀 Features
 * Learn Japanese on YouTube conveniently and joyfully
