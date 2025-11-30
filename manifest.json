@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "MelodyJP",
+  "version": "1.0",
+  "description": "Youtube上提供日中雙語字幕",
+  "permissions": ["activeTab", "scripting", "windows", "tabs", "webNavigation", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_title": "MelodyJP",
+    "default_popup": "popup.html",
+    "default_icon": "icons/memoryJP.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "content.js",
+        "styles.css",
+        "icons/*"
+      ],
+      "matches": ["*://www.youtube.com/*"]
+    }
+  ]
+}

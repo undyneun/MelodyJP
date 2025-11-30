@@ -1,0 +1,25 @@
+#splitButton:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+}
+
+#splitButton:disabled:hover {
+    background-color: #6c757d;
+}
+
+.spinner {
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top: 3px solid white;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

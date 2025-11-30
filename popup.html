@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="UTF-8">
+  <title>MelodyJP</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+
+<body class="w-60 p-3 grid grid-cols-6 gap-2 text-gray-500 ![font-family:'Arial',_sans-serif] bg-slate-50">
+  <header id="logo" class="col-start-2 col-span-4 mx-auto cursor-pointer">
+    <div class="flex flex-row items-center gap-2">
+      <img src="icons/memoryJP.png" alt="MelodyJP Logo" class="w-10 h-10">
+      <h1 class="text-xl text-center text-gray-700">MelodyJP</h1>
+    </div>
+  </header>
+
+  <main class="col-span-6 items-center flex flex-col gap-2">
+    <button id="splitButton" class="w-full hover:bg-green-700 bg-green-500 text-white rounded-md p-2 border-2 text-lg cursor-pointer">開啟介面</button>
+    <div class="flex flex-col gap-2" id="subtitleForm">
+      <section class="border-2 border-gray-300 rounded-lg p-3 space-y-2">
+        <header class="text-sm text-gray-600 mb-1">自動搜尋歌詞</header>
+        <input class="w-full p-2 border-2 border-gray-300 rounded-sm text-sm" type="text" id="searchSinger" placeholder="歌手或團體名稱">
+          <input class="w-full p-2 border-2 border-gray-300 rounded-sm text-sm" type="text" id="searchSong" placeholder="歌曲名稱">
+          <!-- 有 disabled, able-cancel(ableCancel) -->
+          <button data-disabled="false" id="searchSongButton" 
+            class="w-full hover:bg-blue-600 bg-blue-500 text-white rounded-md p-2 border-2 text-sm cursor-pointer 
+            data-[disabled=true]:bg-gray-600 data-[disabled=true]:cursor-not-allowed data-[disabled=true]:data-[able-cancel=true]:hover:bg-red-400 
+            data-[disabled=true]:data-[able-cancel=true]:hover:cursor-pointer">搜尋</button>
+      </section>
+      <label class="text-center">或是</label>
+      <section class="border-2 border-gray-300 rounded-lg p-3">
+          <header class="text-sm text-gray-600 mb-1">自行選擇字幕檔案</header>
+          <div class="flex flex-col items-center">
+            <!-- 有 disabled, able-cancel(ableCancel) -->
+            <button data-disabled="false" class="w-full flex-auto hover:bg-blue-600 bg-blue-500 text-white rounded-md p-2 border-2 text-sm cursor-pointer 
+            data-[disabled=true]:bg-gray-600 data-[disabled=true]:cursor-not-allowed data-[disabled=true]:data-[able-cancel=true]:hover:bg-red-400 
+            data-[disabled=true]:data-[able-cancel=true]:hover:cursor-pointer" id="fileInputButton">選擇檔案</button>
+            <button class="w-full flex-auto hover:bg-blue-600 bg-blue-500 text-white rounded-md p-2 border-2 text-sm cursor-pointer" id="exampleFileButton">下載範例檔案</button>
+          </div>
+          <input hidden type="file" id="fileInput" accept=".txt">
+      </section>
+    </div>
+  </main>
+
+  <footer class="col-span-6">
+    <p class="hidden text-red-500 text-center text-sm" id="notEffective">目前不在影片頁面</p>
+  </footer>
+  <!-- <button id="logoutBtn" class="w-full hover:bg-red-500 bg-red-400 text-white rounded-md p-2 border-2 text-lg cursor-pointer">登出</button> -->
+  <script src="config.js"></script>
+  <script src="popup.js"></script>
+  <script src="tailwind.js"></script>
+</body>
+</html>
